@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+section {
+    background-color: black;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.colaboradores{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 40px;
+    border: 1px solid white;
+}
+
+.item {
+    position: relative;
+    justify-content: center;
+    border: 1px solid white;
+    display: flex;
+    height: 320px;
+    transition: transform 0.2s;
+}
+
+.item:hover{
+    transform: scale(1.06);
+}
+
+.nombre{
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    display: flex;
+    color: white;
+    bottom: -5px;
+}
+
+img {
+    border-radius: 18%;
+    overflow: hidden;
+    width: 270px;
+    max-height: 270px;
+}
+
+

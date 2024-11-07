@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.js"></script>
+</head>
+<body>
+    <section>
+        <div id="app">
+            <div class="colaboradores">
+                <div v-for="colab in colabs" :key="colab.id" class="item">
+                    <img :src=" colab.imagen " alt="">
+                    <div class="nombre"> {{ colab.nombre }} </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="/js/script.js"></script>
+</html>
