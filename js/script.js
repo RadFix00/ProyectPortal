@@ -1,7 +1,6 @@
 const user = new Vuex.Store({
     state: {
         colabs: [
-            { id: 0, nombre: 'Manuel Penes', imagen: '/img/user1.jpg' },
             { id: 1, nombre: 'Nicolas Rodriguez', imagen: '/img/user2.jpg' }
         ]
     },

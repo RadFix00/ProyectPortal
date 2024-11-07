@@ -17,24 +17,25 @@ section {
     align-items: center;
     height: 100%;
     gap: 40px;
-    border: 1px solid white;
 }
 
 .item {
     position: relative;
-    justify-content: center;
-    border: 1px solid white;
-    display: flex;
-    height: 320px;
+    height: 260px;
     transition: transform 0.2s;
+}
+
+.item a{
+    display: flex;
+    justify-content: center;
 }
 
 .item:hover{
     transform: scale(1.06);
 }
 
+
 .nombre{
-    text-align: center;
     font-size: 30px;
     position: absolute;
     display: flex;
@@ -45,8 +46,8 @@ section {
 img {
     border-radius: 18%;
     overflow: hidden;
-    width: 270px;
-    max-height: 270px;
+    width: 230px;
+    max-height: 230px;
 }
 
 
