@@ -11,14 +11,12 @@
 </head>
 <body>
     <section>
-        <div id="app" class="colaboradores">
+        <div id="app">
             <div class="colaboradores">
                 <div v-for="colab in colabs" :key="colab.id" class="item">
-                    <a href="/html/radfix.html">
                         <img :src=" colab.imagen " alt="">
                         <div class="nombre"> {{ colab.nombre }} </div>
                         <div class="aka"> {{ colab.aka }} </div>
-                    </a>
                 </div>
             </div>
         </div>

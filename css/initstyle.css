@@ -35,6 +35,10 @@ section {
     transform: scale(1.06);
 }
 
+h1{
+    color: white;
+
+}
 
 .nombre{
     font-size: 22px;
