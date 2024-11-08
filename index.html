@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="/css/initstyle.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.js"></script>
 </head>
 <body>
+    <header>
+        
+    </header>
     <section>
         <div id="app">
-            <div class="colaboradores">
-                <div v-for="colab in colabs" :key="colab.id" class="item">
-                        <img :src=" colab.imagen " alt="">
-                        <div class="nombre"> {{ colab.nombre }} </div>
-                        <div class="aka"> {{ colab.aka }} </div>
-                </div>
+            <div class="colaboradores"  >
+                <a :href="colab.link" v-for="colab in colabs" :key="colab.id" class="item">
+                    <img :src=" colab.imagen " alt="">
+                    <div class="nombre"> {{ colab.nombre }} </div>
+                    <div class="nombre"> {{colab.aka}} </div>
+                </a>
             </div>
         </div>
     </section>

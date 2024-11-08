@@ -1,8 +1,27 @@
 const user = new Vuex.Store({
     state: {
         colabs: [
-            { id: 1, nombre: 'Nicolas Rodriguez', imagen: '/img/user2.jpg', aka: '@RadFix' },
-            { id: 2, nombre: 'Manuel Ardila', imagen: '/img/user1.jpg', aka: '@Manumenes'}
+            {
+                id: 1,
+                nombre: 'Nicolas Rodriguez',
+                imagen: '/img/user2.jpg',
+                aka: '@RadFix',
+                link: 'html/radfix.html'
+            },
+            {
+                id: 2,
+                nombre: 'Manuel Ardila',
+                imagen: '/img/user1.jpg',
+                aka: '@Manupenes',
+                link: 'html/.html'
+            },
+            {
+                id: 3,
+                nombre: 'Yefer Contreras',
+                imagen: '/img/user3.jpg',
+                aka: '@Manupenes',
+                link: 'html/.html'
+            }
         ]
     },
     getters: {
@@ -12,11 +31,10 @@ const user = new Vuex.Store({
 
 new Vue({
     el: '#app',
-    store: user, // Cambiar aquí 'store' por 'user'
+    store: user,
     computed: {
-        // Acceso a los colaboradores desde el store usando getters
         colabs() {
-            return this.$store.getters.colabs; // Aún accedes a través de this.$store
+            return this.$store.getters.colabs;
         }
     }
 });
