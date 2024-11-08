@@ -10,20 +10,22 @@
     <script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.js"></script>
 </head>
 <body>
-    <header>
-
-    </header>
     <section>
+        <div class="cielo-1"></div>
         <div id="app">
             <div class="colaboradores"  >
-                <a :href="colab.link" v-for="colab in colabs" :key="colab.id" class="item">
+                <a onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')"  :href="colab.link" v-for="colab in colabs" :key="colab.id" class="item">
                     <img :src=" colab.imagen " alt="">
                     <div class="nombre"> {{ colab.nombre }} </div>
-                    <div class="nombre"> {{colab.aka}} </div>
+                    <div class="aka"> {{colab.aka}} </div>
+                </a>
+                <a class="add" onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')" href="/html/login.html">
+                    <img src="/img/add.png" alt="">
                 </a>
             </div>
         </div>
     </section>
+    <audio id='mySound' src='https://cdn.freesound.org/previews/538/538548_3725923-lq.mp3'>
 </body>
 <script src="js/script.js"></script>
 </html>

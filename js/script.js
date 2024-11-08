@@ -1,3 +1,30 @@
+function createSquare(){
+  const section = document.querySelector('section');
+  const square = document.createElement('span');
+  var size = Math.random() * -5;
+  
+  square.style.width = 8 + size + 'px';
+  square.style.height = 8 + size + 'px';
+  
+    square.style.top = Math.random() * innerHeight + 'px';
+  square.style.left = Math.random() * innerWidth + 'px';
+  
+    section.appendChild(square);
+
+}
+setInterval(createSquare , 700)
+
+function PlaySound(soundobj) {
+  var thissound = document.getElementById(soundobj);
+  thissound.play();
+}
+
+function StopSound(soundobj) {
+  var thissound = document.getElementById(soundobj);
+  thissound.pause();
+  thissound.currentTime = 0;
+}
+
 const user = new Vuex.Store({
     state: {
         colabs: [
@@ -12,14 +39,7 @@ const user = new Vuex.Store({
                 id: 2,
                 nombre: 'Manuel Ardila',
                 imagen: 'img/user1.jpg',
-                aka: '@Manupenes',
-                link: 'html/.html'
-            },
-            {
-                id: 3,
-                nombre: 'Yefer Contreras',
-                imagen: 'img/user3.jpg',
-                aka: '@Manupenes',
+                aka: '@Bakugod777',
                 link: 'html/.html'
             }
         ]

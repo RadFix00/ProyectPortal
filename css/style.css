@@ -4,6 +4,44 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+
+
+span {
+    border-radius: 50%;
+    pointer-events: none;
+    position: absolute;
+    background: white;
+    animation: animate 10s linear infinite;
+    z-index: 0;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0) translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    70% {
+        opacity: 1;
+    }
+
+    
+    100% {
+        transform: scale(2) translateX( -4000%) rotate(360deg);
+        opacity: 0;
+    }
+}
+
 section {
     background-color: black;
     height: 100vh;
@@ -15,9 +53,11 @@ section {
 }
 
 .colaboradores{
+    position: relative;
     display: flex;
     height: 100%;
     gap: 40px;
+    z-index: 1;
 }
 
 .item {
@@ -26,37 +66,54 @@ section {
     justify-content: center;
     height: 280px;
     transition: transform 0.2s;
+    
 }
 
 .item:hover{
     transform: scale(1.06);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.59));
 }
 
 .nombre{
-    border: 1px solid white;
     font-size: 22px;
     position: absolute;
     display: flex;
     color: white;
-    bottom: 24px;
+    top: 230px;
 }
 
 .aka {
-    border: 1px solid white;
-    font-size: 22px;
+    top: 200px;
+    font-size: 18px;
     position: absolute;
     display: flex;
-    color: white;
-    bottom: 24px;
+    color: rgb(133, 133, 133);
+    top: 254px;
 }
 
-
-
-img {
+.item img {
     border-radius: 18%;
     overflow: hidden;
     width: 230px;
     max-height: 230px;
+}
+
+.colaboradores .add{
+    border-radius: 100%;
+    max-width: 20%;
+    max-height: 250px;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+    
+}
+
+.add:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.59));
 }
 
 
