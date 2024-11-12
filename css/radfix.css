@@ -10,7 +10,7 @@ body {
 }
 
 .main {
-    padding: 40px;
+    padding: 2%;
     display: flex;
 }
 
@@ -19,35 +19,76 @@ section {
     margin: 10px ;
     border-radius: 22px;
     background-color: rgb(110, 110, 147);
-}
-
-.main .perfil{
-    height: 600px;
+    border: 1px solid black;
 }
 
 .perfil {
     padding: 20px;
     text-align: center;
-    width: 30%;
+    width: 25%;
 }
 
 .perfil img{
-    max-width: 85%;
+    max-width: 80%;
     border-radius: 22px;
 }
 
 .perfil h1{
-    margin: 10px 0px;
-    font-size: 28px;
+    margin-top: 8px;
+    font-size: 22px;
     color: white;
-    text-align: center;
 }
 
+.propiedades {
+    display: fixed;
+    position: relative;
+    margin: 25px 0px;
+}
+
+.propiedades img {
+    left: 0px;
+    position: absolute;
+    padding: 8px;
+    border-radius: 12px;
+    background-color: rgb(135, 135, 180);
+    width: 10%;
+    border-top: 1px solid rgba(255, 255, 255, 0.498);
+    border-left: 1px solid rgba(255, 255, 255, 0.498);
+    filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+}
+.propiedades h3 {
+    margin-left: 55px;
+    text-align: initial;
+}
+
+.propiedades p {
+    margin-left: 55px;
+    text-align: initial;
+}
+
+
+
 .about {
+    position: relative;
     width: 100%;
     padding: 20px;
 }
 
-.about h1{
-    text-align: center;
+.nav-list {
+    top: 0px;
+    right: 0px;
+    position: absolute;
+    padding: 10px;
+    background-color: rgb(183, 183, 235);
+    border-bottom-left-radius: 20px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
+
+.nav-list a{
+    font-weight: bold;
+    margin: 0px 50px;
+    text-decoration: none;
+    color: black;
+}
+

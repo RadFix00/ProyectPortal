@@ -15,7 +15,7 @@ span {
     border-radius: 50%;
     pointer-events: none;
     position: absolute;
-    background: rgba(255, 255, 255, 0.677);
+    background: rgba(255, 255, 255, 0.814);
     animation: animate 10s linear infinite;
     z-index: 0;
 }
