@@ -11,6 +11,7 @@
         <section class="perfil">
             <img src="/img/user2.jpg" alt="">
             <H1>Nicolás Rodriguez</H1>
+            <hr>
             <div class="propiedades">
                 <img src="/img/1 (4).png" alt="">
                 <h3>Email</h3>
@@ -37,21 +38,58 @@
         <section class="about">
             <div class="nav-list">
                 <nav>
-                    <a href="">ABOUT</a>
-                    <a href="">PROYECTS</a>
-                    <a href="">CONTACT</a>
+                    <input type="button" value="ABOUT-ME" onclick="openAbout()">
+                    <input type="button" onclick="toggleSection('study')" value="STUDYS">
+                    <input type="button" onclick="toggleSection('projects')" value="PROJECTS">
+                    <input type="button" onclick="toggleSection('contact')" value="CONTACT">
                 </nav>
             </div>
-        
 
-        
-           
+            <div class="about-me">
+                <h1>SOBRE MI</h1>
+                <hr>
+                <p>Estudiante de Programación de software.
+                    Soy una persona responsable y con fácil adaptabilidad.
+                    Buscando ampliar experiencia laboral.</p>
+                <h1>Mis Habilidades</h1>
+                <p>
+                
+                </p>
+                <h1>Testimonios</h1>
+                <p>
+                
+                </p>
+
+            </div>
 
             
-           
-        
+
+            <div class="study" id="study">
+                <h1>Estudios</h1>
+                <hr>
+
+                
+
+
+            </div>
+
+            <div class="projects" id="projects" >
+                <h1>Proyectos </h1>
+                <hr>
+                
+
+                
+
+
+            </div>
+
+            <div class="contact" id="contact" >
+                <h1>Contactos</h1>
+                
+            </div>
         
         </section>
     </div>
 </body>
+<script src="/js/radscript.js"></script>
 </html>
