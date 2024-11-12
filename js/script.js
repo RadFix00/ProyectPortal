@@ -12,7 +12,8 @@ function createSquare(){
     section.appendChild(square);
 
 }
-setInterval(createSquare , 700)
+setInterval(createSquare, 800)
+
 
 function PlaySound(soundobj) {
   var thissound = document.getElementById(soundobj);
@@ -40,7 +41,7 @@ const user = new Vuex.Store({
                 nombre: 'Manuel Ardila',
                 imagen: 'img/user1.jpg',
                 aka: '@Bakugod777',
-                link: 'html/.html'
+                link: 'html/bakugod.html'
             }
         ]
     },

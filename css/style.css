@@ -11,12 +11,11 @@ body {
     background: #000;
 }
 
-
 span {
     border-radius: 50%;
     pointer-events: none;
     position: absolute;
-    background: white;
+    background: rgba(255, 255, 255, 0.677);
     animation: animate 10s linear infinite;
     z-index: 0;
 }
@@ -79,7 +78,7 @@ section {
     position: absolute;
     display: flex;
     color: white;
-    top: 230px;
+    top: 200px;
 }
 
 .aka {
@@ -88,14 +87,14 @@ section {
     position: absolute;
     display: flex;
     color: rgb(133, 133, 133);
-    top: 254px;
+    top: 224px;
 }
 
 .item img {
     border-radius: 18%;
     overflow: hidden;
-    width: 230px;
-    max-height: 230px;
+    width: 200px;
+    max-height: 200px;
 }
 
 .colaboradores .add{
@@ -108,7 +107,10 @@ section {
     display: flex;
     align-items: center;
     transition: transform 0.2s;
-    
+}
+
+.add img{
+    max-width: 200px;
 }
 
 .add:hover {
