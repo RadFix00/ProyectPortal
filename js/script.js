@@ -32,7 +32,7 @@ const user = new Vuex.Store({
             {
                 id: 1,
                 nombre: 'Nicolas Rodriguez',
-                imagen: 'img/user2.jpg',
+                imagen: 'img/1.jpg',
                 aka: '@RadFix',
                 link: 'html/radfix.html'
             },
