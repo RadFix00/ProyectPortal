@@ -14,13 +14,13 @@
 
         <div class="cielo-1"></div>
         <div id="app">
-            <div class="colaboradores"  >
-                <a onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')"  :href="colab.link" v-for="colab in colabs" :key="colab.id" class="item">
+            <div  onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')" class="colaboradores"  >
+                <a   :href="colab.link" v-for="colab in colabs" :key="colab.id" class="item">
                     <img :src=" colab.imagen " alt="">
                     <div class="nombre"> {{ colab.nombre }} </div>
                     <div class="aka"> {{colab.aka}} </div>
                 </a>
-                <a class="add" onmouseover="PlaySound('mySound')" onmouseout="StopSound('mySound')" href="html/login.html">
+                <a class="add" href="html/login.html">
                     <img src="img/add.png" alt="">
                 </a>
             </div>
