@@ -1,7 +1,6 @@
 * {
     margin: 0px;
     padding: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;;
 }
 
 .clase {
@@ -60,6 +59,16 @@
     bottom: -10px;
 }
 
+.juego {
+    font-family: 'VT323', sans-serif;
+    font-size: 25px;
+}
+
+.html{
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
 header {
     position: fixed;
     right: 10%;
@@ -76,7 +85,6 @@ header {
     margin: 0px 20px;
     color: #0053b8;
     font-weight: bold;
-    font-size: 20px;
     background-color: transparent;
     border: none;
 }
@@ -93,6 +101,7 @@ section {
     background-repeat: no-repeat;
     background-size:cover;
     position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .perfil {
@@ -165,6 +174,7 @@ fieldset {
 }
 
 .servicios {
+    font-family: 'VT323', sans-serif;
     height: 100vh;
     width: 100%;
     color: white;
@@ -173,9 +183,11 @@ fieldset {
 
 
 .servicios h1{
-    margin: 40px 9%;
+    margin-top: 100px;
+    margin-left: 9%;
     text-align: initial;
-    font-size: 60px;
+    font-size: 100px;
+    font-weight: 200;
 }
 
 .servicios .txt{
@@ -194,8 +206,8 @@ fieldset {
     width: 20px; 
     height: 20px;
     background-color: #004dac; 
-    border-radius: 50%; 
     transform: translate(-40px, 50%);
+    
 }
 
 .sel-item:hover::before {
@@ -209,29 +221,34 @@ fieldset {
 }
 
 .servicios .txt img {
-    width: 70px;
+    width: 80px;
     margin: 0px 20px;
 }
 
 .servicios .txt h2{
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 50px;
+    font-weight: 200;
     margin: 20px 0px;
 }
 
 
 .servicios .txt h3 {
     margin-top: 35px;
-    font-size: 25px;
+    font-size: 35px;
+    font-weight: 200;
     text-align: initial;
 }
 
 .servicios .txt h4 {
+    font-size: 25px;
     color: #004dac;
     text-align: initial;
 }
 
 .servicios .txt p {
     width: 100%;
+    font-size: 25px;
+    font-weight: 200;
 }
