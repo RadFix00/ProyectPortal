@@ -110,6 +110,11 @@ section {
     filter: drop-shadow(35px 35px 10px #1a5dae65);
     border-radius: 18px;
     z-index: 1;
+    transition: transform 0.2s;
+}
+
+.perfil img:hover {
+    transform: scale(1.04);
 }
 
 .txt {
@@ -149,20 +154,57 @@ section {
 }
 
 .servicios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    width: 100%;
+    color: white;
+}
+
+
+
+.servicios h1{
+    margin: 40px 9%;
+    text-align: initial;
+    font-size: 60px;
 }
 
 .servicios .txt{
-    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    max-width: 100%;
+    height: 80vh;
 }
 
-.servicios .txt h1{
-    text-align: initial;
+.servicios .txt div{
+    max-width: 22%;
+    margin: 2% 0px ;
 }
+
+.servicios .txt img {
+    width: 70px;
+    margin: 0px 20px;
+}
+
+.servicios .txt h2{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin: 20px 0px;
+}
+
 
 .servicios .txt h3 {
+    margin-top: 35px;
+    font-size: 25px;
     text-align: initial;
+}
+
+.servicios .txt h4 {
+    color: #004dac;
+    text-align: initial;
+    margin: 10px 0px;
+}
+
+.servicios .txt p {
+    width: 100%;
 }
