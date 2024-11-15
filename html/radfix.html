@@ -5,91 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RadFix</title>
     <link rel="stylesheet" href="/css/radfix.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.js"></script>
 </head>
 <body>
-    <div class="main">
-        <section class="perfil">
+    <header>
+        <div class="nav-list">
+            <nav>
+                <input type="button" value="SOBRE MI">
+                <input type="button" value="RESUMEN">
+                <input type="button" value="PROYECTOS">
+                <input type="button" value="CONTACTO">
+            </nav>
+        </div>
+    </header>
+    <section class="presentacion">
+        <!--<p class="sect"><span class="clase">class</span><span class="igual">=</span><span class="clasename">"presentacion"</span></p>-->
+        <div class="perfil">
             <img src="/img/user2.jpg" alt="">
-            <H1>Nicolás Rodriguez</H1>
+            <div class="txt">
+                <h3><span class="signo3">&lt;</span><span class="sh3">h3</span><span class="signo3">&gt;</span>ESTUDIANTE INGENIERIA DE SOFTWARE<span class="signo3">&lt;/</span><span class="sh3">h3</span><span class="signo3">&gt;</span></h3>
+                <h1><span class="signo1">&lt;</span><span class="sh1">h1</span><span class="signo1">&gt;</span>¿Quien Soy?<span class="signo1">&lt;/</span><span class="sh1">h1</span><span class="signo1">&gt;</span></h1>
+                <hr>
+                <p><span class="signop">&lt;</span><span class="sp">p</span><span class="signop">&gt;</span>Soy estudiante apasionado por el desarrollo front-end. Estoy en busca de una oportunidad
+                laboral que me permita aplicar y ampliar mis conocimientos en HTML, CSS Y JavaScript, y
+                aprender nuevas tecnologias en un entorno profesional. Me gusta crear interfaces
+                intuitivas y atractivas, estoy motivado para seguir creciendo en el area de diseño y desarrollo
+                web.<span class="signop">&lt;/</span><span class="sp">p</span><span class="signop">&gt;</span></p>
+                
+            </div>
+        </div>
+    </section>
+    <section class="servicios">
+        <div class="txt">
+            <h1>Resumen</h1>
+            <div>
+                <h2><img src="" alt="icono de educacion"> Educacion</h2>
+
+                <h3>Universidad Ucompensar</h3>
+                <h4>2024 - Actualidad</h4>
+                <p>Que estoy haciendo</p>
+
+                <h3>Universidad Ucompensar</h3>
+                <h4>2022 - 2024</h4>
+                <p>Que estoy haciendo</p>
+
+                <h2><img src="" alt="icono de educacion"> Experiencia</h2>
+
+                <h3>Banco Falabella</h3>
+                <h4>2024/03 - 2024/10</h4>
+                <p>Que estoy haciendo</p>
+
+                <h3>Colombian Travel Service</h3>
+                <h4>2024/03 - 2024/10</h4>
+                <p>Que estoy haciendo</p>
+            </div>
+        </div>
+    </section>
+    <section class="proyectos">
+        <div class="projects" id="projects">
+            <h1>Proyectos </h1>
             <hr>
-            <div class="propiedades">
-                <img src="/img/1 (4).png" alt="">
-                <h3>Email</h3>
-                <p>nicolassanrad@gmail.com</p>
+            <div class="grid-card">
+                <div class="proyectos">
+                    <a id="project" v-for="colab in colabs" :key="colab.id" :href="colab.link">
+                        <img :src=" colab.imagen " alt="">
+                        <div class="nombre"> {{ colab.nombre }} </div>
+                        <div class="aka"> {{colab.aka}} </div>
+                    </a>
+                </div>
             </div>
-            <div class="propiedades">
-                <img src="/img/1 (3).png" alt="">
-                <h3>Phone</h3>
-                <p>+57 3203709750</p>
-            </div>
-            <div class="propiedades">
-                <img src="/img/1 (1).png" alt="">
-                <h3>Birthday</h3>
-                <p>September, 2003</p>
-            </div>
-            <div class="propiedades">
-                <img src="/img/1 (2).png" alt="">
-                <h3>Location</h3>
-                <p>Bogotá, Colombia</p>
-            </div>
-        
-        </section>
-
-        <section class="about">
-            <div class="nav-list">
-                <nav>
-                    <input type="button" value="ABOUT-ME" onclick="openAbout()">
-                    <input type="button" onclick="toggleSection('study')" value="STUDYS">
-                    <input type="button" onclick="toggleSection('projects')" value="PROJECTS">
-                    <input type="button" onclick="toggleSection('contact')" value="CONTACT">
-                </nav>
-            </div>
-
-            <div class="about-me">
-                <h1>SOBRE MI</h1>
-                <hr>
-                <p>Estudiante de Programación de software.
-                    Soy una persona responsable y con fácil adaptabilidad.
-                    Buscando ampliar experiencia laboral.</p>
-                <h1>Mis Habilidades</h1>
-                <p>
-                
-                </p>
-                <h1>Testimonios</h1>
-                <p>
-                
-                </p>
-
-            </div>
-
-            
-
-            <div class="study" id="study">
-                <h1>Estudios</h1>
-                <hr>
-
-                
-
-
-            </div>
-
-            <div class="projects" id="projects" >
-                <h1>Proyectos </h1>
-                <hr>
-                
-
-                
-
-
-            </div>
-
-            <div class="contact" id="contact" >
-                <h1>Contactos</h1>
-                
-            </div>
-        
-        </section>
-    </div>
+        </div>
+    
+    </section>
+    <section class="contacto">
+    <div class="contact" id="contact">
+        <h1>Contactame</h1>
+        <div class="form">
+            <h3 class="title-log">Iniciar Sesión</h3>
+            <form @submit.prevent="login">
+                <div class="ingresar">
+                    <fieldset>
+                        <legend for="password" class="">Mensaje</legend>
+                        <input type="password" id="password" v-model="password" class="form-control"
+                            placeholder="Ingresa tu Password">
+                    </fieldset>
+                </div>
+                <div class="ingresar">
+                    <fieldset>
+                        <legend for="password" class="">Mensaje</legend>
+                        <input type="password" id="password" v-model="password" class="form-control"
+                            placeholder="Ingresa tu Password">
+                    </fieldset>
+                </div>
+                <div class="ingresar">
+                    <fieldset>
+                        <legend for="password" class="">Mensaje</legend>
+                        <input type="password" id="password" v-model="password" class="form-control"
+                            placeholder="Ingresa tu Password">
+                    </fieldset>
+                </div>
+    
+                <p v-if="errorMessage"> {{errorMessage }} </p>
+                <button type="submit" class="btn-lg">Enviar</button>
+            </form>
+        </div>
+    </section>
 </body>
 <script src="/js/radscript.js"></script>
 </html>

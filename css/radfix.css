@@ -4,131 +4,165 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;;
 }
 
-body {
-    background-color: rgb(135, 135, 180);
-    height: 100vh;
+.clase {
+    color:rgb(0, 195, 255);
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.main {
-    padding: 2%;
-    display: flex;
-}
-
-section {
-    overflow: hidden;
-    margin: 10px ;
-    border-radius: 22px;
-    background-color: rgb(110, 110, 147);
-    border: 1px solid black;
-}
-
-.perfil {
-    padding: 20px;
-    text-align: center;
-    width: 25%;
-}
-
-.perfil img{
-    max-width: 80%;
-    border-radius: 22px;
-}
-
-.perfil h1{
-    margin: 15px 0px;
-    font-size: 22px;
+.igual {
     color: white;
+    font-size: 30px;
+    font-weight: 600;
 }
 
-.propiedades {
-    display: fixed;
+.clasename {
+    color: rgb(184, 150, 0);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.signo3 {
+    font-size: 35px;
+    color: gray;
+    font-weight: 400;
+}
+
+.sh3 {
+    font-size: 35px;
+    color: #004dac;
+}
+
+.signo1 {
+    font-size: 60px;
+    color: gray;
+    font-weight: 400;
+}
+
+.sh1 {
+    font-size: 60px;
+    color: #004dac;
+}
+
+.signop {
+    font-size: 20px;
+    color: gray;
+    font-weight: 400;
+}
+
+.sp {
+    font-size: 20px;
+    color: #004dac;
+}
+
+.sect {
     position: relative;
-    margin: 25px 0px;
+    bottom: -10px;
 }
 
-.propiedades img {
-    left: 0px;
-    position: absolute;
-    padding: 8px;
-    border-radius: 12px;
-    background-color: rgb(135, 135, 180);
-    width: 10%;
-    border-top: 1px solid rgba(255, 255, 255, 0.498);
-    border-left: 1px solid rgba(255, 255, 255, 0.498);
-    filter: drop-shadow(0 0 2px rgb(0, 0, 0));
-}
-.propiedades h3 {
-    margin-left: 55px;
-    text-align: initial;
-}
-
-.propiedades p {
-    margin-left: 55px;
-    text-align: initial;
-}
-
-.about {
-    position: relative;
-    width: 100%;
-    padding: 20px;
+header {
+    position: fixed;
+    right: 10%;
+    z-index: 999;
 }
 
 .nav-list {
-    top: 0px;
-    right: 0px;
-    position: absolute;
-    padding: 15px 10px;
-    background-color: rgb(183, 183, 235);
-    border-bottom-left-radius: 20px;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
 }
 
-.nav-list input{
+.nav-list nav input{
+    margin: 0px 20px;
+    color: #0053b8;
     font-weight: bold;
-    margin: 0px 50px;
-    text-decoration: none;
-    color: black;
+    font-size: 20px;
     background-color: transparent;
     border: none;
 }
 
-.about-me h1{
-    font-size: 100px;
-    color: black;
-
+section {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
 
-.study {
+.presentacion {
+    background-color: rgb(29, 29, 29);
+    background-repeat: no-repeat;
+    background-size:cover;
+    position: relative;
+    
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.perfil img {
     position: absolute;
-    display: none; /* Dont Touc */
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    background-color: rgb(255, 255, 255);
+    height: 32em;
+    right: 10%;
+    filter: drop-shadow(35px 35px 10px #1a5dae65);
+    border-radius: 18px;
+    z-index: 1;
+}
+
+.txt {
+    position: relative;
+    max-width: 75%;
+    padding: 10px;
     z-index: 0;
 }
 
-.projects{
-    position: absolute;
-    display: none;/* Dont Touc */
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
+.txt h1 {
+    margin: 10px 0px;
+    font-size: 60px;
+    color: white;
 }
 
-.contact {
-    position: absolute;
-    display: none;/* Dont Touc */
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    background-color: rgb(255, 255, 255);
-    z-index: 0;
+.txt h3 {
+    font-size: 30px;
+    text-align: initial;
+    color: #ffffff;
 }
 
+.txt p {
+    font-size: 20px;
+    text-align: initial;
+    width: 65%;
+    font-weight: bold;
+    color: white;
+}
+
+.txt hr {
+    height: 2px;
+    max-width: 160px;
+    margin: 20px 0px;
+    filter: drop-shadow(0px 0px 4px #4978b295);
+    border-color:#004dac;
+    background-color: #004dac;
+}
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.servicios .txt{
+    border: 1px solid white;
+}
+
+.servicios .txt h1{
+    text-align: initial;
+}
+
+.servicios .txt h3 {
+    text-align: initial;
+}

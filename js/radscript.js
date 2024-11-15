@@ -8,24 +8,15 @@ function toggleSection(section) {
     });
 }
 
-function openAbout() {
-    document.getElementById('study').style.display = 'none';
-    document.getElementById('projects').style.display = 'none';
-    document.getElementById('contact').style.display = 'none';
-}
-
 const user = new Vuex.Store({
     state: {
         colabs: [
             {
-                nombre: 'Nicolas Rodriguez',
-                imagen: 'img/user2.jpg',
-                link: 'html/radfix.html'
-            },
-            {
-                nombre: 'Nicolas Rodriguez',
-                imagen: 'img/user2.jpg',
-                link: 'html/radfix.html'
+                id: 1,
+                nombre: 'Atelier Clothe Shop',
+                imagen: '/img/atelier.jpg',
+                link: 'https://radfix00.github.io/Atelier-Shop/',
+                aka: 'Tienda De Ropa'
             }
         ]
     },
@@ -35,7 +26,7 @@ const user = new Vuex.Store({
 });
 
 new Vue({
-    el: '#projects',
+    el: '#project',
     store: user,
     computed: {
         colabs() {
