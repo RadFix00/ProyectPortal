@@ -17,9 +17,9 @@
         <div class="nav-list">
             <nav>
                 <input class="html" type="button" value="&lt;SOBRE MI&gt;">
-                <input class="juego" type="button" value="RESUMEN">
-                <input type="button" value="PROYECTOS">
-                <input type="button" value="CONTACTO">
+                <input class="juego" type="button" value="&lt;RESUMEN&gt;">
+                <input type="button" value="&lt;PROYECTOS&gt;">
+                <input type="button" value="&lt;CONTACTO&gt;">
             </nav>
         </div>
     </header>
@@ -65,7 +65,7 @@
                 <p>Practicante encargado de la creación de reportes en Looker Studio con el uso de Big Query</p>
 
                 <h3 class="sel-item">Colombian Travel Service</h3>
-                <h4>2024/03 - 2024/10</h4>
+                <h4>2023/03 - 2024/01</h4>
                 <p>Atención al cliente y transcripción de datos para generar formularios de VISA</p>
             </div>
 
@@ -80,46 +80,41 @@
         </div>
     </section>
     <section class="proyectos">
-        <div class="projects" id="projects">
-            <h1>Proyectos </h1>
-            <hr>
+        <h1>PROYECTOS </h1>
+        <div class="projects" id="project">
             <div class="grid-card">
-                <div class="proyectos">
-                    <a id="project" v-for="colab in colabs" :key="colab.id" :href="colab.link">
-                        <img :src=" colab.imagen " alt="">
-                        <div class="nombre"> {{ colab.nombre }} </div>
-                        <div class="aka"> {{colab.aka}} </div>
-                    </a>
-                </div>
+                <a id="project" v-for="colab in colabs" :key="colab.id" :href="colab.link">
+                    <img :src=" colab.imagen " alt="">
+                    <div class="nombre"> {{ colab.nombre }} </div>
+                    <div class="aka"> {{colab.aka}} </div>
+                </a>
             </div>
         </div>
-    
     </section>
     <section class="contacto">
     <div class="contact" id="contact">
         <h1>Contactame</h1>
         <div class="form">
-            <h3 class="title-log">Iniciar Sesión</h3>
             <form @submit.prevent="login">
                 <div class="ingresar">
                     <fieldset>
-                        <legend for="password" class="">Mensaje</legend>
-                        <input type="password" id="password" v-model="password" class="form-control"
-                            placeholder="Ingresa tu Password">
+                        <legend for="password" class="">Nombre</legend>
+                        <input type="text" id="password" v-model="password" class="form-control"
+                            placeholder="Nombre">
+                    </fieldset>
+                </div>
+                <div class="ingresar">
+                    <fieldset>
+                        <legend for="password" class="">Correo</legend>
+                        <input type="email" id="password" v-model="password" class="form-control"
+                            placeholder="Email">
                     </fieldset>
                 </div>
                 <div class="ingresar">
                     <fieldset>
                         <legend for="password" class="">Mensaje</legend>
-                        <input type="password" id="password" v-model="password" class="form-control"
-                            placeholder="Ingresa tu Password">
-                    </fieldset>
-                </div>
-                <div class="ingresar">
-                    <fieldset>
-                        <legend for="password" class="">Mensaje</legend>
-                        <input type="password" id="password" v-model="password" class="form-control"
-                            placeholder="Ingresa tu Password">
+                        <input type="text" id="password" v-model="password" class="form-control"
+                            placeholder="Escribe Aqui tu mensaje">
                     </fieldset>
                 </div>
     
