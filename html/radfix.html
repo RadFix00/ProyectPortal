@@ -82,12 +82,12 @@
         <div class="projects" id="project">
             <div class="grid-card">
                 <a id="project" v-for="colab in colabs" :key="colab.id" :href="colab.link">
-                    <img :src=" colab.imagen " alt="">
+                    <img class="img-card" :src=" colab.imagen " alt="">
                     <div class="nombre"> {{ colab.nombre }} </div>
                     <div class="aka"> {{colab.aka}} </div>
-                    <button>&lt;Tablet&gt;</button>
-                    <button>&lt;Computador&gt;</button>
-                    <button>&lt;Celular&gt;</button>
+                    <button class="btn"><img src="/img/pc.png" alt=""></button>
+                    <button class="btn"><img src="/img/tablet.png" alt=""></button>
+                    <button class="btn"><img src="/img/celular.png" alt=""></button>
                 </a>
             </div>
         </div>

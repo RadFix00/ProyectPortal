@@ -61,7 +61,6 @@
     bottom: -10px;
 }
 
-
 header {
     position: fixed;
     right: 10%;
@@ -260,37 +259,11 @@ fieldset {
     font-weight: 200;
 }
 
-.skill {
-    position: absolute;
-    text-align: center;
-    top: 96vh;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    
-}
-
-.skill p {
-    margin: 2% 0%;
-    font-size: 70px;
-}
-
-.skill img{
-    margin: 0 5%;
-    width: 8%;
-    transition: transform 0.3s;
-}
-
-.skill img:hover{
-    transform: scale(1.2);
-    filter: drop-shadow(0px 0px 5px #003c86b1);
-}
-
-
 .grid-card {
     margin: 0 3%;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
     border-radius: 22px;
     text-align: center;
     gap: 30px;
@@ -298,32 +271,82 @@ fieldset {
 
 .grid-card a {
     background-color: #002f6885;
-    padding: 50px 0px;
     border-radius: 18px;
     border: 1px solid white;
     text-decoration: none;
     color: white;
-    font-size: 25px;
+    height: 100%;
 }
 
-.grid-card img {
+.grid-card .img-card {
+    margin: 2% 0%;
     width: 70%;
     border-radius: 18px;
 }
 
-a button{
-    padding: 10px;
-    margin: 0% 1.5%;
-    position:unset;
-    bottom: 0px;
-    color: #0053b8;
-    border: 3px solid #0053b8;
-    background-color: transparent;
-
+.grid-card .nombre{
+    margin: 2%;
 }
 
+.grid-card .aka {
+    margin: 2%;
+}
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+.btn{
+    border: none;
+    background-color: transparent;
+    margin: 2% 4%;
+    max-width: 70px;
+}
+
+.btn img{
+    margin: 2%;
+    width: 75%;
+    transition: transform 0.2s;
+}
+
+.btn img:hover {
+    transform: scale(1.08);
+    filter: drop-shadow(0px 0px 5px #003c86b1);
+}
+
+.skill {
+    position: absolute;
+    text-align: center;
+    top: 96vh;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.skill p {
+    margin: 2% 0%;
+    font-size: 70px;
+}
+
+.skill img {
+    margin: 2% 5%;
+    width: 8%;
+    transition: transform 0.3s;
+}
+
+.skill img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 0px 5px #003c86b1);
+}
+
+/*Portatiles baja*/
+@media (max-width: 1440px)  {
+
+    .signo1 {
+        font-size: 50px;
+        color: gray;
+        font-weight: 400;
+    }
+
+    .sh1 {
+        font-size: 50px;
+        color: #004dac;
+    }
 
     .txt h1 {
         margin: 1% 0px;
@@ -337,9 +360,6 @@ a button{
     .txt p {
         font-size: 28px;
     }
-
-
-
 
     .txt hr {
         margin: 10px 0px;
@@ -375,6 +395,241 @@ a button{
 
     .servicios .txt p {
         font-size: 23px;
+    }
+
+    .proyectos h1 {
+        font-size: 80px;
+    }
+
+    .grid-card {
+        margin: 0 2%;
+    }
+
+    .grid-card a {
+        height: 100%;
+    }
+
+    .grid-card .img-card {
+        margin: 2% 0%;
+        width: 50%;
+    }
+
+    .grid-card .nombre{
+        margin: 1%;
+    }
+
+    .grid-card .aka {
+        margin: 1%;
+    }
+
+    .btn{
+        margin: 2% 0%;
+    }
+
+    .btn img{
+        width: 65%;
+    }
+
+    .skill {
+        top: 100vh;
+    }
+
+    .skill p {
+        margin: 1% 0%;
+        font-size: 70px;
+    }
+
+    .skill img {
+        margin: 2% 5%;
+        width: 7.5%;
+    }
+}
+/*Tablets*/
+@media (max-width: 1054px) {
+
+    .signo1 {
+        font-size: 35px;
+        color: gray;
+        font-weight: 400;
+    }
+
+    .sh1 {
+        font-size: 35px;
+        color: #004dac;
+    }
+
+    .txt h1 {
+        margin: 2% 0px;
+        font-size: 35px;
+    }
+
+    .txt h3 {
+        font-size: 20px;
+    }
+
+    .txt p {
+        font-size: 20px;
+    }
+
+    .servicios h1 {
+        font-size: 100px;
+        margin-top: 4%;
+    }
+
+    .sel-item::before {
+        width: 15px;
+        height: 15px;
+        transform: translate(-30px, 50%);
+    }
+
+    .servicios .txt img {
+        width: 50px;
+    }
+
+    .servicios .txt h2 {
+        font-size: 35px;
+        margin: 0px 0px;
+    }
+
+    .servicios .txt h3 {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+
+    .servicios .txt h4 {
+        font-size: 20px;
+    }
+
+    .servicios .txt p {
+        font-size: 19px;
+    }
+
+    .proyectos h1 {
+        font-size: 70px;
+        margin-top: 5%;
+    }
+
+    .grid-card {
+        margin: 0 2%;
+    }
+
+    .grid-card .img-card {
+        margin: 4% 0%;
+        width: 70%;
+    }
+
+    .skill {
+        top: 96vh;
+    }
+
+    .skill p {
+        margin: 0% 0%;
+        font-size: 70px;
+    }
+
+    .skill img {
+        margin: 2% 4%;
+        width: 9%;
+    }
+}
+
+/*Celulares*/
+@media (max-width: 500px) {
+
+    .txt h1 {
+        margin: 1% 0px;
+        font-size: 10px;
+    }
+
+    .txt h3 {
+        font-size: 28px;
+    }
+
+    .txt p {
+        font-size: 28px;
+    }
+
+    .txt hr {
+        margin: 10px 0px;
+    }
+
+    .servicios h1 {
+        margin-top: 4%;
+    }
+
+    .sel-item::before {
+        width: 15px;
+        height: 15px;
+        transform: translate(-30px, 50%);
+    }
+
+    .servicios .txt img {
+        width: 60px;
+    }
+
+    .servicios .txt h2 {
+        font-size: 40px;
+        margin: 0px 0px;
+    }
+
+    .servicios .txt h3 {
+        margin-top: 25px;
+        font-size: 25px;
+    }
+
+    .servicios .txt h4 {
+        font-size: 22px;
+    }
+
+    .servicios .txt p {
+        font-size: 23px;
+    }
+
+    .proyectos h1 {
+        font-size: 80px;
+    }
+
+    .grid-card {
+        margin: 0 2%;
+    }
+
+    .grid-card a {
+        height: 100%;
+    }
+
+    .grid-card .img-card {
+        margin: 2% 0%;
+        width: 50%;
+    }
+
+    .grid-card .nombre {
+        margin: 1%;
+    }
+
+    .grid-card .aka {
+        margin: 1%;
+    }
+
+    .btn {
+        margin: 2% 0%;
+    }
+
+    .btn img {
+        width: 65%;
+    }
+
+    .skill {
+        top: 100vh;
+    }
+
+    .skill p {
+        margin: 1% 0%;
+        font-size: 70px;
+    }
+
+    .skill img {
+        margin: 2% 5%;
+        width: 7.5%;
     }
 }
 
