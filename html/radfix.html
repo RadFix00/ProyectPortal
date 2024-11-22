@@ -16,14 +16,14 @@
     <header>
         <div class="nav-list">
             <nav>
-                <input class="html" type="button" value="&lt;SOBRE MI&gt;">
-                <input class="juego" type="button" value="&lt;RESUMEN&gt;">
-                <input type="button" value="&lt;PROYECTOS&gt;">
-                <input type="button" value="&lt;CONTACTO&gt;">
+                <a href="#presentacion"><input class="html" type="button" value="&lt;SOBRE MI&gt;"></a>
+                <a href="#servicios"><input class="juego" type="button" value="&lt;RESUMEN&gt;"></a>
+                <a href="#proyectos"><input type="button" value="&lt;PROYECTOS&gt;"></a>
+                <a href="#contacto"><input type="button" value="&lt;CONTACTO&gt;"></a>
             </nav>
         </div>
     </header>
-    <section class="presentacion">
+    <section class="presentacion" id="presentacion">
         <div class="perfil">
             <img src="/img/user2.jpg" alt="">
             <div class="txt">
@@ -42,7 +42,7 @@
             </div>
         </div>
     </section>
-    <section class="servicios">
+    <section class="servicios" id="servicios">
         <h1>HISTORIAL</h1>
         <div class="txt">
             <div>
@@ -79,7 +79,7 @@
             </div>
         </div>
     </section>
-    <section class="proyectos">
+    <section class="proyectos" id="proyectos">
         <h1>PROYECTOS </h1>
         <div class="projects" id="project">
             <div class="grid-card">
@@ -87,11 +87,15 @@
                     <img :src=" colab.imagen " alt="">
                     <div class="nombre"> {{ colab.nombre }} </div>
                     <div class="aka"> {{colab.aka}} </div>
+                    <button>&lt;Tablet&gt;</button>
+                    <button>&lt;Computador&gt;</button>
+                    <button>&lt;Celular&gt;</button>
                 </a>
             </div>
         </div>
+        <h1>skills adfsasdf</h1>
     </section>
-    <section class="contacto">
+    <section class="contacto" id="contacto">
     <div class="contact" id="contact">
         <h1>Contactame</h1>
         <div class="form">

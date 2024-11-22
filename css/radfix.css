@@ -77,7 +77,7 @@ header {
 }
 
 .nav-list nav input{
-    margin: 0px 20px;
+    margin: 0px 2vh;
     color: #0053b8;
     font-weight: bold;
     background-color: transparent;
@@ -109,9 +109,8 @@ section {
 
 .perfil img {
     position: absolute;
-    height: 20em;
-    right: 10%;
-    filter: drop-shadow(35px 35px 10px #1a5dae65);
+    height: 60vh;
+    right: 20vh;
     border-radius: 18px;
     z-index: 1;
     transition: transform 0.2s;
@@ -155,7 +154,7 @@ fieldset {
 .txt p {
     font-size: 30px;
     text-align: initial;
-    width: 70%;
+    width: 85%;
     font-weight: bold;
     color: white;
 }
@@ -173,11 +172,12 @@ fieldset {
     height: 100vh;
     width: 100%;
     color: white;
+    filter: drop-shadow(35px 35px 10px #0073ff);
+    z-index: 10;
 }
 
-
 .servicios h1{
-    margin-top: 100px;
+    margin-top: 6%;
     margin-left: 9%;
     text-align: initial;
     font-size: 100px;
@@ -189,10 +189,9 @@ fieldset {
     justify-content: center;
     gap: 10%;
     max-width: 100%;
-    height: 80vh;
+    height: 80%;
     border: none;
 }
-
 
 .sel-item::before {
     content: "";
@@ -208,15 +207,13 @@ fieldset {
     background-color: #3498db;
 }
 
-
 .servicios .txt div{
     max-width: 22%;
-    margin: 2% 0px ;
 }
 
 .servicios .txt img {
     width: 80px;
-    margin: 0px 12px;
+    margin: 3vh 12px;
 }
 
 .servicios .txt h2{
@@ -226,7 +223,6 @@ fieldset {
     font-weight: 200;
     margin: 20px 0px;
 }
-
 
 .servicios .txt h3 {
     margin-top: 35px;
@@ -254,13 +250,15 @@ fieldset {
 }
 
 .proyectos h1 {
-    margin-top: 0.4em;
+    margin: 2% 0;
     text-align: center;
     font-size: 100px;
     font-weight: 200;
 }
 
+
 .grid-card {
+    margin: 0 3%;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -270,6 +268,7 @@ fieldset {
 }
 
 .grid-card a {
+    background-color: #002f6885;
     padding: 30px 0px;
     border-radius: 18px;
     border: 1px solid white;
@@ -283,4 +282,56 @@ fieldset {
     border-radius: 18px;
 }
 
+a button{
+    padding: 10px;
+    margin: 2% 1.5%;
+    position:unset;
+    bottom: 0px;
+    color: #0053b8;
+    border: 3px solid #0053b8;
+    background-color: transparent;
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+
+
+
+    .txt hr {
+        margin: 10px 0px;
+    }
+   
+    .servicios h1{
+        margin-top: 4%;
+    }
+
+    .sel-item::before {
+        width: 15px; 
+        height: 15px;
+        transform: translate(-30px, 50%);
+    }
+
+    .servicios .txt img {
+        width: 60px;
+    }
+
+    .servicios .txt h2{
+        font-size: 40px;
+        margin: 0px 0px;
+    }
+
+    .servicios .txt h3 {
+        margin-top: 25px;
+        font-size: 25px;
+    }
+
+    .servicios .txt h4 {
+        font-size: 22px;
+    }
+
+    .servicios .txt p {
+        font-size: 23px;
+    }
+}
 

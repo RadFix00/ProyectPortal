@@ -16,7 +16,16 @@ const user = new Vuex.Store({
                 nombre: 'Atelier Clothe Shop',
                 imagen: '/img/atelier.jpg',
                 link: 'https://radfix00.github.io/Atelier-Shop/',
-                aka: 'Tienda De Ropa'
+                aka: 'Tienda De Ropa',
+                skills: 'Css - Html - VueJs - JavaScript'
+            } ,
+            {
+                id: 2,
+                nombre: 'Galactic-Vortex',
+                imagen: '/img/galactic-vortex.png',
+                link: 'https://radfix00.github.io/Galactic-Vortex/',
+                aka: 'Juego Web Js',
+                skills: 'Html - Css - Boostrap - JavaScript'
             }
         ]
     },
