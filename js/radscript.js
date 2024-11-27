@@ -26,6 +26,14 @@ const user = new Vuex.Store({
                 link: 'https://radfix00.github.io/Galactic-Vortex/',
                 aka: 'Juego Web Js',
                 skills: 'Html - Css - Boostrap - JavaScript'
+            },
+            {
+                id: 2,
+                nombre: 'TuGrua.com',
+                imagen: '/img/galactic-vortex.png',
+                link: 'https://radfix00.github.io/TuGrua/',
+                aka: 'Aplicacion Web Geolocation',
+                skills: 'Html - Css - Boostrap - JavaScript'
             }
         ]
     },
