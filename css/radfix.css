@@ -134,7 +134,7 @@ section {
     z-index: 0;
 }
 
-fieldset {
+.perfil fieldset {
     max-width: 75%;
     padding: 30px;
     border-radius: 18px;
@@ -276,26 +276,23 @@ fieldset {
     text-decoration: none;
     color: white;
     height: 100%;
+    transition: transform 0.2s;
 }
 
 .grid-card a:hover {
     transform: scale(1.08);
-    filter: contrast(110%);
+    filter: contrast(100%);
 }
 
 .grid-card a:not(:hover) {
-    filter: brightness(0.5) saturate(0.1) contrast(1.2) blur(1px);
+    filter: brightness(0.5) saturate(0.1) contrast(1.2) blur(2px);
 }
-
-
 
 .grid-card .img-card {
     margin: 2% 0%;
     width: 70%;
     border-radius: 18px;
 }
-
-
 
 .grid-card .nombre{
     margin: 2%;
@@ -345,6 +342,69 @@ fieldset {
 .skill img:hover {
     transform: scale(1.2);
     filter: drop-shadow(0px 0px 5px #003c86b1);
+}
+
+.contacto {
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.contacto h1{
+    margin: 2% 10%;
+    text-align: initial;
+    font-size: 100px;
+    font-weight: 200;
+}
+
+.ingresar {
+    margin: 1% 5%;
+}
+
+.ingresar fieldset{
+    padding: 30px;
+    border-radius: 18px;
+    border: 3px solid white;
+    height: 100px;
+}
+
+.ingresar .mensaje{
+    padding: 30px;
+    border-radius: 18px;
+    border: 3px solid white;
+    height: 100px;
+}
+
+.ingresar legend{
+    font-size: 60px;
+}
+
+.ingresar input{
+    height: 100%;
+    width: 100%;
+}
+
+.ingresar button{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-container {
+    width: 100%;
+    height: 69%;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+#preview-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
 }
 
 /*Portatiles baja*/
