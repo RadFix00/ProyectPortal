@@ -99,6 +99,9 @@
             <img src="/img/css.png" alt="CSS5">
             <img src="/img/js.png" alt="JavaScript">
         </div>
+        <div id="preview-container">
+            <iframe id="preview-frame" src="" frameborder="1253"></iframe>
+        </div>
        
     </section>
     <section class="contacto" id="contacto">
@@ -107,12 +110,10 @@
             <div class="form">
                 <form target="_blank" @submit.prevent="login" class="contenedores" action="https://formsubmit.co/nicolassanrad@gmail.com" method="POST">
                     <div class="ingresar">
-                        <div id="preview-container">
-                            <iframe id="preview-frame" src="" frameborder="1253"></iframe>
-                        </div>
+                       
                         <fieldset>
                             <legend for="password" class=""> Nombre: </legend>
-                            <input type="text" name="name" v-model="password" class="form-control"
+                            <input type="text" name="nombre" v-model="password" class="form-control"
                                 placeholder="Nombre">
                         </fieldset>
                     </div>
