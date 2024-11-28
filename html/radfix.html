@@ -105,34 +105,31 @@
     <div class="contact" id="contact">
         <h1>Contactame</h1>
             <div class="form">
-                <form @submit.prevent="login" class="contenedores" action="https://formsubmit.co/nicolassanrad@gmail.com" method="post">
+                <form target="_blank" @submit.prevent="login" class="contenedores" action="https://formsubmit.co/nicolassanrad@gmail.com" method="POST">
                     <div class="ingresar">
                         <div id="preview-container">
                             <iframe id="preview-frame" src="" frameborder="1253"></iframe>
                         </div>
                         <fieldset>
                             <legend for="password" class=""> Nombre: </legend>
-                            <input type="text" id="password" v-model="password" class="form-control"
+                            <input type="text" name="name" v-model="password" class="form-control"
                                 placeholder="Nombre">
                         </fieldset>
                     </div>
                     <div class="ingresar">
                         <fieldset>
                             <legend for="password" class=""> Correo: </legend>
-                            <input type="email" id="password" v-model="password" class="form-control"
+                            <input type="email" name="email" v-model="email"
                                 placeholder="Email">
                         </fieldset>
                     </div>
                     <div class="ingresar">
                         <fieldset>
                             <legend for="password" class=""> Mensaje: </legend>
-                            <input type="text" id="password" v-model="password" class="form-control"
-                                placeholder="Escribe Aqui tu mensaje">
+                            <textarea name="message" rows="2" placeholder="Escribe Aqui tu mensaje" required></textarea>
                         </fieldset>
                     </div>
-        
-                    <p v-if="errorMessage"> {{errorMessage }} </p>
-                    <button type="submit" class="btn-lg">Enviar</button>
+                    <button type="submit" >Enviar</button>
                 </form>
             </div>
         </div>
