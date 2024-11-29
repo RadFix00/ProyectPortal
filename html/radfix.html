@@ -81,14 +81,18 @@
         <h1>PROYECTOS </h1>
         <div class="projects" id="project">
             <div class="grid-card">
-                <a id="project" v-for="colab in colabs" :key="colab.id" >
+                <a v-for="colab in colabs" :key="colab.id" >
                     <img class="img-card" :src=" colab.imagen " alt="">
                     <div class="nombre"> {{ colab.nombre }} </div>
                     <div class="aka"> {{colab.aka}} </div>
-                    <button @click="setProject(colab.link, 'pc')">PC</button>
-                    <button @click="setProject(colab.link, 'tablet')">Tablet</button>
-                    <button @click="setProject(colab.link, 'mobile')">Mobile</button>
+                    <button @click="handleClick(colab.link, 'pc')">PC</button>
+                    <button @click="handleClick(colab.link, 'tablet')">Tablet</button>
+                    <button @click="handleClick(colab.link, 'mobile')">Mobile</button>
                 </a>
+            </div>
+            <div id="preview-container" >
+                <button @click="closeScreen">X</button>
+                <iframe id="preview-frame" :src="iframeSrc" :width="iframeWidth" :height="iframeHeight" frameborder="0"></iframe>
             </div>
         </div>
         <div class="skill">
@@ -99,10 +103,7 @@
             <img src="/img/css.png" alt="CSS5">
             <img src="/img/js.png" alt="JavaScript">
         </div>
-        <div id="preview-container">
-            <iframe id="preview-frame" src="" frameborder="1253"></iframe>
-        </div>
-       
+        <div id="fondo"></div>
     </section>
     <section class="contacto" id="contacto">
     <div class="contact" id="contact">
@@ -130,7 +131,7 @@
                             <textarea name="message" rows="2" placeholder="Escribe Aqui tu mensaje" required></textarea>
                         </fieldset>
                     </div>
-                    <button type="submit" >Enviar</button>
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
         </div>

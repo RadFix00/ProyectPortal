@@ -1,3 +1,13 @@
+function openScreen() {
+    document.getElementById('preview-container').style.display = 'block';
+    document.getElementById('fondo').style.display = 'block';
+}
+
+function closeScreen() {
+    document.getElementById('preview-container').style.display = 'none';
+    document.getElementById('fondo').style.display = 'none';
+}
+
 const user = new Vuex.Store({
   state: {
     colabs: [
@@ -28,13 +38,15 @@ const user = new Vuex.Store({
     ],
   },
   getters: {
-    colabs: (state) => state.colabs,
-  },
+    colabs(state) {
+      return state.colabs;
+    }
+  }
 });
 
 new Vue({
   el: '#project',
-  store: user,
+  store: user, // Asegúrate de que 'user' sea el nombre de tu store en Vuex
   data() {
     return {
       iframeSrc: '',
@@ -47,23 +59,31 @@ new Vue({
       return this.$store.getters.colabs;
     },
   },
-  methods: {
+   methods: {
+    // Método que maneja ambas acciones
+    handleClick(link, device) {
+      openScreen(); 
+
+      this.setProject(link, device);
+    },
+    
     setProject(link, device) {
       this.iframeSrc = link;
       switch (device) {
         case 'pc':
           this.iframeWidth = '100%';
-          this.iframeHeight = '600px';
+          this.iframeHeight = '100%';
           break;
         case 'tablet':
-          this.iframeWidth = '768px';
-          this.iframeHeight = '1024px';
+          this.iframeWidth = '76%';
+          this.iframeHeight = '100%';
           break;
         case 'mobile':
-          this.iframeWidth = '375px';
-          this.iframeHeight = '667px';
+          this.iframeWidth = '37%';
+          this.iframeHeight = '100%';
           break;
       }
-    },
+     },
+     
   },
 });

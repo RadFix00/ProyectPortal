@@ -64,7 +64,7 @@
 header {
     position: fixed;
     right: 10%;
-    z-index: 999;
+    z-index: 5;
     
 }
 
@@ -276,17 +276,22 @@ section {
     text-decoration: none;
     color: white;
     height: 100%;
-    transition: transform 0.2s;
+    transition: transform 0.2s, opacity 0.3s;
+    filter: none;
+}
+
+
+.grid-card:hover a {
+    filter: blur(3px); 
+    opacity: 0.5;
 }
 
 .grid-card a:hover {
-    transform: scale(1.08);
-    filter: contrast(100%);
+    filter: none; 
+    opacity: 1; 
+    transform: scale(1.2);
 }
 
-.grid-card a:not(:hover) {
-    filter: brightness(0.5) saturate(0.1) contrast(1.2) blur(2px);
-}
 
 .grid-card .img-card {
     margin: 2% 0%;
@@ -391,20 +396,45 @@ section {
     align-items: center;
 }
 
-#preview-container {
+#fondo {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 69%;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-    overflow: hidden;
-    position: relative;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.736);
+    z-index: 6;
+    backdrop-filter: blur(3px);
+}
+
+#preview-container {
+    display: none; /* Dont Touc */
+    position: fixed; /* Dont Touc */
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    z-index: 7;
+}
+
+#preview-container button{
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    font-size: 30px;
+    border: 1px solid white;
+    color: rgb(0, 0, 0);
+    transform: scale(1.3);
+    z-index: 12;
 }
 
 #preview-frame {
-    width: 100%;
-    height: 100%;
     border: none;
     overflow: hidden;
+    z-index: 7;
 }
 
 /*Portatiles baja*/
