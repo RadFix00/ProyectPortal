@@ -284,12 +284,13 @@ section {
 .grid-card:hover a {
     filter: blur(3px); 
     opacity: 0.5;
+    transform: scale(0.9);
 }
 
 .grid-card a:hover {
     filter: none; 
     opacity: 1; 
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 

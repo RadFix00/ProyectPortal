@@ -35,6 +35,7 @@ const user = new Vuex.Store({
         aka: 'Aplicacion Web Geolocation',
         skills: 'Html - Css - Boostrap - JavaScript',
       },
+      
     ],
   },
   getters: {
