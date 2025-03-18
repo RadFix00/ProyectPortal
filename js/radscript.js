@@ -43,6 +43,14 @@ const user = new Vuex.Store({
         aka: 'Pagina Web Turistico',
         skills: 'Html - Css',
       },
+      {
+        id: 5,
+        nombre: 'MoneyApp',
+        imagen: '/img/atelier.jpg',
+        link: 'https://radfix00.github.io/MoneyApp/',
+        aka: 'Rediseño Pagina de Apuestas',
+        skills: 'HTML - CSS'
+      }
       
     ],
   },
