@@ -263,7 +263,7 @@ section {
     margin: 0 3%;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     border-radius: 22px;
     text-align: center;
     gap: 30px;

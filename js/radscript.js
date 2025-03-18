@@ -35,6 +35,14 @@ const user = new Vuex.Store({
         aka: 'Aplicacion Web Geolocation',
         skills: 'Html - Css - Boostrap - JavaScript',
       },
+      {
+        id: 4,
+        nombre: 'Colombian Travel Service',
+        imagen: '/img/galactic-vortex.png',
+        link: 'https://radfix00.github.io/Colombian-travel-service-up/',
+        aka: 'Pagina Web Turistico',
+        skills: 'Html - Css',
+      },
       
     ],
   },
