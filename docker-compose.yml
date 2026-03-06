@@ -1,0 +1,9 @@
+services:
+  mi-web:
+    image: nginx:alpine
+    container_name: portal-estatico
+    ports:
+      - "3000:80"
+    volumes:
+      - .:/usr/share/nginx/html
+    restart: always
