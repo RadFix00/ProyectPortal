@@ -1,155 +1,392 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Syne:wght@800&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    :root {
+      --red:      #cc1122;
+      --red-dim:  #880a16;
+      --red-glow: #ff2233;
+      --black:    #0a0608;
+      --black2:   #130a0c;
+      --panel:    #1a0d10;
+      --panel2:   #200f13;
+      --border:   #3a1018;
+      --border2:  #5a1820;
+      --white:    #f5eeee;
+      --off:      #c8b8b8;
+      --dim:      #8a7070;
+      --cream:    #ffe8e8;
+    }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Navbar ── */
-.Head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 36px;
-  height: 64px;
-  background: linear-gradient(
-    135deg,
-    rgba(224, 247, 250, 0.9) 0%,
-    rgba(232, 244, 255, 0.9) 100%
-  );
-  backdrop-filter: blur(16px);
-  border-bottom: 0.5px solid rgba(33, 150, 243, 0.15);
-  box-shadow: 0 4px 24px rgba(33, 150, 243, 0.08);
-  position: relative;
-}
+    /* ── FONDO con textura noise ── */
+    body {
+      background-color: var(--black);
+      background-image:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
+        radial-gradient(ellipse at 50% 0%, #2a050a 0%, transparent 60%);
+      color: var(--off);
+      font-family: 'Syne Mono', monospace;
+      font-size: 13px;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
 
-.Head::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(33, 150, 243, 0.3), transparent);
-}
+    /* scanlines overlay */
+    body::after {
+      content: '';
+      position: fixed; inset: 0;
+      background: repeating-linear-gradient(
+        0deg, transparent, transparent 3px,
+        rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px
+      );
+      pointer-events: none;
+      z-index: 9998;
+    }
 
-/* ── Marca / logo ── */
-.Head-brand {
-  text-decoration: none;
-}
+    a { color: var(--red); text-decoration: none; transition: color .15s; }
+    a:hover { color: var(--cream); text-decoration: underline; }
 
-.Head-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #0d47a1;
-  letter-spacing: -0.02em;
-}
+    /* ── MARQUEE ── */
+    .marquee-bar {
+      background: var(--red-dim);
+      border-bottom: 1px solid var(--red);
+      overflow: hidden; white-space: nowrap;
+      padding: 4px 0;
+      font-family: 'Syne Mono', monospace;
+      font-size: 10px; letter-spacing: 2px;
+      color: var(--cream);
+    }
+    .marquee-bar span {
+      display: inline-block;
+      animation: mq 30s linear infinite;
+    }
+    @keyframes mq { from{transform:translateX(100vw)} to{transform:translateX(-100%)} }
 
-.Head-title span {
-  color: #2196f3;
-}
+    /* ── HEADER ── */
+    .site-header {
+      border-bottom: 2px solid var(--border2);
+      background: linear-gradient(180deg, #1f0a0e 0%, var(--black) 100%);
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 4px 24px rgba(180,0,20,.15);
+    }
+    .header-inner {
+      max-width: 920px; margin: 0 auto;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px; gap: 12px; flex-wrap: wrap;
+    }
+    .logo {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 20px; font-weight: 700;
+      color: var(--white);
+      letter-spacing: 3px;
+      text-shadow: 0 0 18px var(--red), 0 0 40px rgba(200,0,20,.4);
+      text-decoration: none;
+    }
+    .logo span { color: var(--red); }
+    .logo small {
+      display: block; font-size: 9px;
+      color: var(--dim); letter-spacing: 4px;
+      font-family: 'Syne Mono', monospace;
+      text-shadow: none;
+    }
+    nav { display: flex; gap: 4px; flex-wrap: wrap; }
+    nav a {
+      font-size: 10px; letter-spacing: 1px;
+      color: var(--dim);
+      border: 1px solid var(--border2);
+      padding: 4px 10px;
+      background: var(--panel);
+      transition: all .15s;
+    }
+    nav a:hover {
+      color: var(--cream); border-color: var(--red);
+      background: var(--red-dim);
+      text-decoration: none;
+      box-shadow: 0 0 8px rgba(200,0,20,.3);
+    }
 
-/* ── Links ── */
-.Head-links {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
+    /* ── WRAPPER ── */
+    .wrapper { max-width: 920px; margin: 0 auto; padding: 14px 10px 40px; }
 
-.Head-link {
-  font-size: 14px;
-  font-weight: 500;
-  color: #546e7a;
-  text-decoration: none;
-  padding: 6px 16px;
-  border-radius: 8px;
-  transition: all 0.18s ease;
-  position: relative;
-}
+    /* ── HERO ── */
+    .hero {
+      position: relative; text-align: center;
+      padding: 28px 16px 20px;
+      border: 1px solid var(--border2);
+      border-top: none;
+      background: linear-gradient(180deg, #1a0508 0%, var(--black) 100%);
+      overflow: hidden;
+      margin-bottom: 12px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(180,0,20,.3) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    /* kanji decorativo de fondo */
+    .hero-kanji {
+      position: absolute;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 160px; font-weight: 700;
+      color: rgba(150,0,15,.06);
+      top: -20px; right: -10px;
+      line-height: 1; pointer-events: none;
+      user-select: none;
+    }
+    .hero-banners {
+      display: flex; justify-content: center;
+      gap: 6px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .hero-banners img { height: 31px; image-rendering: pixelated; }
+    .hero-name {
+      font-family: 'Shippori Mincho', serif;
+      font-size: clamp(22px, 5vw, 38px);
+      font-weight: 700; color: var(--white);
+      letter-spacing: 6px;
+      text-shadow: 0 0 30px var(--red), 0 0 60px rgba(200,0,20,.3);
+      margin-bottom: 4px;
+      animation: flicker 8s infinite;
+    }
+    @keyframes flicker {
+      0%,95%,100%{opacity:1}
+      96%{opacity:.7} 97%{opacity:1} 98%{opacity:.8} 99%{opacity:1}
+    }
+    .hero-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px; color: var(--red);
+      letter-spacing: 6px; margin-bottom: 6px;
+    }
+    .hero-role {
+      font-size: 10px; color: var(--dim);
+      letter-spacing: 4px; text-transform: uppercase;
+    }
+    .hero-sep {
+      width: 120px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      margin: 12px auto;
+    }
+    .blink { animation: bl 1.2s step-end infinite; }
+    @keyframes bl { 50%{opacity:0} }
 
-.Head-link:hover {
-  color: #1565c0;
-  background: rgba(33, 150, 243, 0.08);
-}
+    /* ── LAYOUT ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 190px 1fr;
+      gap: 10px;
+    }
 
-.Head-link.active {
-  color: #1565c0;
-  background: rgba(33, 150, 243, 0.1);
-  font-weight: 600;
-}
+    /* ── BOX ── */
+    .box {
+      background: var(--panel);
+      border: 1px solid var(--border2);
+      margin-bottom: 8px;
+      overflow: hidden;
+    }
+    .box-title {
+      background: linear-gradient(90deg, var(--red-dim), #3a0a10);
+      color: var(--cream);
+      font-size: 9px; letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-bottom: 1px solid var(--border2);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .box-title::before { content: '◆'; color: var(--red); font-size: 7px; }
+    .box-body { padding: 10px; }
 
-.Head-link.active::after {
-  content: '';
-  position: absolute;
-  bottom: 3px; left: 50%;
-  transform: translateX(-50%);
-  width: 16px; height: 2px;
-  background: #2196f3;
-  border-radius: 2px;
-}
+    /* ── SIDEBAR ── */
+    /* avatar */
+    .avatar-wrap { text-align: center; margin-bottom: 10px; position: relative; }
+    .avatar-frame {
+      display: inline-block;
+      border: 2px solid var(--red-dim);
+      box-shadow: 0 0 20px rgba(180,0,20,.4), inset 0 0 20px rgba(0,0,0,.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .avatar-frame::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 60%, rgba(10,0,3,.8) 100%);
+    }
+    .avatar-frame img {
+      display: block; width: 148px; height: 200px;
+      object-fit: cover; object-position: top;
+      image-rendering: pixelated;
+    }
+    .avatar-name {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 13px; color: var(--white);
+      text-align: center; margin-top: 7px;
+      letter-spacing: 2px;
+    }
+    .avatar-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 10px; color: var(--red);
+      text-align: center; letter-spacing: 3px;
+    }
+    .sep { width:100%; height:1px; background: var(--border2); margin: 8px 0; }
 
-/* ── Hamburguesa ── */
-.Head-burger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-}
-.Head-burger span {
-  display: block;
-  height: 4px;
-  width: 100%;
-  background: #1565c0;
-  margin: 5px 0;
-  border-radius: 2px;
-  transition: 0.3s;
-}
+    /* status */
+    .status-row { display:flex; align-items:center; gap:6px; font-size:10px; color: var(--dim); }
+    .pulse { width:6px; height:6px; border-radius:50%; background:var(--red); animation:pu 2s ease infinite; flex-shrink:0; }
+    @keyframes pu { 0%,100%{box-shadow:0 0 0 0 rgba(200,0,20,.6)} 50%{box-shadow:0 0 0 5px rgba(200,0,20,0)} }
 
-/* ── Responsive ── */
-@media (max-width: 768px) {
-  .Head {
-    padding: 0 16px;
-    height: 56px;
-  }
-  .Head-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(255,255,255,0.98);
-    box-shadow: 0 8px 24px rgba(33,150,243,0.08);
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0;
-    width: 180px;
-    padding: 12px 0;
-    border-radius: 0 0 12px 12px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.25s cubic-bezier(.4,2,.6,1);
-    z-index: 9;
-  }
-  .Head-links.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
-  }
-  .Head-link {
-    width: 100%;
-    text-align: right;
-    padding: 12px 24px;
-    border-radius: 0;
-  }
-  .Head-burger {
-    display: flex;
-  }
-}
+    /* sidebar nav */
+    .snav a {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 11px; color: var(--off);
+      padding: 5px 2px;
+      border-bottom: 1px solid var(--border);
+      transition: all .12s;
+    }
+    .snav a:last-child { border-bottom: none; }
+    .snav a:hover { color: var(--cream); padding-left: 5px; text-decoration: none; }
+    .snav a:hover .nav-bullet { color: var(--red); }
+    .nav-bullet { color: var(--border2); font-size: 8px; transition: color .12s; }
+
+    /* skills */
+    .skill-row { margin-bottom: 7px; }
+    .skill-label { font-size: 9px; color: var(--dim); letter-spacing: 1px; display: flex; justify-content: space-between; margin-bottom: 3px; }
+    .skill-label span { color: var(--red); }
+    .skill-track { height: 4px; background: var(--border); }
+    .skill-fill { height: 100%; background: linear-gradient(90deg, var(--red-dim), var(--red)); }
+
+    /* bio stats */
+    .stat { font-size: 10px; color: var(--dim); margin-bottom: 4px; display: flex; gap: 6px; }
+    .stat b { color: var(--red); min-width: 10px; }
+
+    /* contact mini */
+    .clink { font-size: 10px; color: var(--off); display: block; margin-bottom: 4px; }
+    .clink span { color: var(--dim); margin-right: 4px; }
+
+    /* now playing */
+    .np { font-size: 10px; line-height: 2; color: var(--dim); }
+    .np .track { color: var(--cream); font-size: 11px; }
+    .np .bar { color: var(--red-dim); letter-spacing: -1px; }
+
+    /* banners */
+    .banners { display: flex; flex-wrap: wrap; gap: 3px; }
+    .banners img { height: 31px; image-rendering: pixelated; }
+
+    /* ── MAIN ── */
+    /* intro */
+    .intro {
+      border: 1px solid var(--border2);
+      background: var(--panel2);
+      padding: 14px 16px;
+      display: flex; gap: 14px; align-items: flex-start;
+      margin-bottom: 8px; position: relative; overflow: hidden;
+    }
+    .intro::before {
+      content: '武';
+      font-family: 'Noto Serif JP', serif;
+      font-size: 90px; color: rgba(180,0,20,.05);
+      position: absolute; right: 10px; bottom: -10px;
+      line-height: 1; pointer-events: none;
+    }
+    .intro-quote {
+      font-family: 'Shippori Mincho', serif;
+      font-size: 11px; color: var(--red);
+      letter-spacing: 2px; writing-mode: vertical-rl;
+      flex-shrink: 0; opacity: .7;
+    }
+    .intro-text {
+      font-size: 12px; color: var(--off);
+      line-height: 1.9;
+    }
+    .intro-text em { color: var(--cream); font-style: normal; }
+
+    /* entries */
+    .entry { padding: 9px 0; border-bottom: 1px solid var(--border); }
+    .entry:last-child { border-bottom: none; padding-bottom: 0; }
+    .entry-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; margin-bottom: 2px; }
+    .entry-title { font-family: 'Shippori Mincho', serif; font-size: 13px; font-weight: 700; color: var(--white); letter-spacing: 1px; }
+    .entry-date { font-size: 9px; color: var(--red); letter-spacing: 1px; }
+    .entry-where { font-size: 10px; color: var(--dim); margin-bottom: 4px; letter-spacing: 1px; }
+    .entry-body { font-size: 11px; color: var(--off); line-height: 1.8; }
+    .tag { display:inline-block; font-size:8px; border:1px solid var(--border2); color:var(--dim); padding:1px 5px; margin:4px 2px 0 0; letter-spacing:1px; }
+
+    /* project cards */
+    .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .proj-card {
+      border: 1px solid var(--border2);
+      background: var(--panel2);
+      padding: 10px; position: relative; overflow: hidden;
+      transition: border-color .15s;
+    }
+    .proj-card:hover { border-color: var(--red); }
+    .proj-card::before {
+      content: attr(data-n);
+      font-family: 'Shippori Mincho', serif;
+      font-size: 52px; color: rgba(180,0,20,.07);
+      position: absolute; right: 6px; bottom: -8px;
+      line-height: 1; pointer-events: none;
+    }
+    .proj-card h3 { font-family: 'Shippori Mincho', serif; font-size: 12px; font-weight: 700; color: var(--white); margin-bottom: 5px; letter-spacing: 1px; }
+    .proj-card p { font-size: 10px; color: var(--off); line-height: 1.7; }
+
+    /* contact grid */
+    .cg { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .cg-item label { display: block; font-size: 8px; color: var(--red); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3px; }
+    .cg-item span { font-size: 11px; color: var(--off); }
+    .cg-item a { font-size: 11px; color: var(--off); }
+    .cg-item a:hover { color: var(--cream); }
+
+    /* ── DECORATIVOS ANIME SVG ── */
+    /* sakura petal CSS */
+    .deco-petals { position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none; overflow:hidden; }
+    .petal { position:absolute; width:6px; height:6px; background:rgba(180,0,20,.2); border-radius:50% 0; transform:rotate(45deg); animation:fall linear infinite; }
+    @keyframes fall {
+      0%   { transform: rotate(45deg) translateY(-20px); opacity:.8; }
+      100% { transform: rotate(45deg) translateY(400px); opacity:0; }
+    }
+
+    /* ── GLITCH title ── */
+    .glitch { position: relative; display: inline-block; }
+    .glitch::before, .glitch::after {
+      content: attr(data-text);
+      position: absolute; top: 0; left: 0;
+      font-family: inherit; font-size: inherit;
+      font-weight: inherit; letter-spacing: inherit;
+      color: inherit;
+    }
+    .glitch::before {
+      color: #ff0030; clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+      transform: translateX(-2px); animation: glitch1 4s infinite;
+    }
+    .glitch::after {
+      color: #00f0ff; clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      transform: translateX(2px); animation: glitch2 4s infinite;
+    }
+    @keyframes glitch1 {
+      0%,90%,100%{transform:translateX(-2px);opacity:0}
+      92%{transform:translateX(-4px);opacity:.8}
+      94%{transform:translateX(0);opacity:.6}
+    }
+    @keyframes glitch2 {
+      0%,90%,100%{transform:translateX(2px);opacity:0}
+      92%{transform:translateX(4px);opacity:.8}
+      94%{transform:translateX(0);opacity:.6}
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      border-top: 1px solid var(--border2);
+      margin-top: 12px; padding: 16px 10px;
+      text-align: center;
+      font-size: 9px; color: var(--dim);
+      letter-spacing: 2px; line-height: 2.5;
+    }
+    .site-footer a { color: var(--dim); }
+    .site-footer a:hover { color: var(--red); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .layout { grid-template-columns: 1fr; }
+      .proj-grid { grid-template-columns: 1fr; }
+      .cg { grid-template-columns: 1fr; }
+      .hero-kanji { font-size: 80px; }
+    }

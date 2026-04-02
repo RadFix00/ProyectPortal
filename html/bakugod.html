@@ -1,41 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Syne:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/bakugod.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>✦ bakugod ✦ manuel ardila ✦</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&family=Syne+Mono&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/bakugod.css">
 </head>
 <body>
 
-  <header>
-    <nav class="Head">
+<!-- MARQUEE -->
+<div class="marquee-bar">
+  <span>
+    ✦ bakugod.exe ✦ manuel ardila ✦ frontend developer ✦ colombia ✦ html · css · javascript · react ✦ diseño web · accesibilidad · ui ✦ disponible para proyectos ✦ 開発者 ✦ bakugod.exe ✦ manuel ardila ✦ frontend developer ✦
+  </span>
+</div>
 
-
-      <a class="Head-brand" href="#home">
-        <span class="Head-title">Sobre<span><br> mi</span></span>
-      </a>
-
-      <button class="Head-burger" id="burgerBtn" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <div class="Head-links" id="navLinks">
-        <a class="Head-link active" href="#home">Estudios</a>
-        <a class="Head-link" href="#about">Proyectos</a>
-        <a class="Head-link" href="#contact">Contacto</a>
-      </div>
-
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="#home">
+      <span>MANUEL / </span>ARDILA
+      <small>開発者 · DESARROLLADOR WEB</small>
+    </a>
+    <nav>
+      <a href="#sobre-mi">sobre mí</a>
+      <a href="#estudios">estudios</a>
+      <a href="#experiencia">experiencia</a>
+      <a href="#proyectos">proyectos</a>
+      <a href="#contacto">contacto</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <script>
-   
-  </script>
+<!-- HERO -->
+<div class="hero" id="home">
+  <div class="deco-petals" aria-hidden="true">
+    <div class="petal" style="left:8%;animation-duration:7s;animation-delay:0s;top:-10px"></div>
+    <div class="petal" style="left:22%;animation-duration:9s;animation-delay:2s;top:-10px;width:4px;height:4px"></div>
+    <div class="petal" style="left:60%;animation-duration:6s;animation-delay:1s;top:-10px"></div>
+    <div class="petal" style="left:78%;animation-duration:11s;animation-delay:3s;top:-10px;width:8px;height:8px"></div>
+    <div class="petal" style="left:92%;animation-duration:8s;animation-delay:0.5s;top:-10px;width:5px;height:5px"></div>
+  </div>
+  <div class="hero-kanji" aria-hidden="true">剣</div>
 
+  <div class="hero-banners">
+    <img src="https://ransei.neocities.org/assets/img/banners/geocities5.gif" alt="" onerror="this.style.display='none'">
+    <img src="https://lupinus.neocities.org/vampiresnestbutton1.gif" alt="" onerror="this.style.display='none'">
+    <img src="https://cinni.net/images/web/tiny/ichigo_i3.gif" alt="" onerror="this.style.display='none'">
+    <img src="https://visce.neocities.org/images/4indx/02.gif" alt="" onerror="this.style.display='none'">
+  </div>
+
+  <div class="hero-sep"></div>
+  <div class="hero-jp">マヌエル · アルディラ</div>
+  <h1 class="hero-name glitch" data-text="MANUEL ARDILA">MANUEL ARDILA</h1>
+  <div class="hero-role">
+    <span class="blink">◆</span>
+    frontend developer &nbsp;·&nbsp; diseñador web &nbsp;·&nbsp; colombia
+    <span class="blink">◆</span>
+  </div>
+  <div class="hero-sep"></div>
+</div>
+
+<!-- LAYOUT -->
+<div class="wrapper">
+<div class="layout">
+
+  <!-- ── SIDEBAR ── -->
+  <aside>
+
+    <!-- perfil -->
+    <div class="box">
+      <div class="box-title">perfil</div>
+      <div class="box-body">
+        <div class="avatar-wrap">
+          <div class="avatar-frame">
+            <img
+              src="https://sweetheartmemory.neocities.org/indexgirl1.png"
+              alt="avatar"
+              onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22148%22 height=%22200%22><rect fill=%22%231a0508%22 width=%22148%22 height=%22200%22/><text x=%2250%%25%22 y=%2255%%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23cc1122%22 font-size=%2260%22>剣</text></svg>'"
+            >
+          </div>
+          <div class="avatar-name">Manuel Jesús Ardila Parrado</div>
+          <div class="avatar-jp">Estudiante · Fundación Universitaria Compensar</div>
+        </div>
+        <div class="sep"></div>
+        <div class="stat"><b>◆</b> dev web & diseñador gráfico</div>
+        <div class="stat"><b>◆</b> accesibilidad · performance</div>
+        <div class="stat"><b>◆</b> bogotá, colombia</div>
+        <div class="sep"></div>
+        <div class="status-row">
+          <div class="pulse"></div>
+          disponible
+        </div>
+      </div>
+    </div>
+
+    <!-- nav -->
+    <div class="box">
+      <div class="box-title">navegación</div>
+      <div class="box-body snav">
+        <a href="#sobre-mi"><span class="nav-bullet">◆</span> sobre mí</a>
+        <a href="#estudios"><span class="nav-bullet">◆</span> estudios</a>
+        <a href="#experiencia"><span class="nav-bullet">◆</span> experiencia</a>
+        <a href="#proyectos"><span class="nav-bullet">◆</span> proyectos</a>
+        <a href="#contacto"><span class="nav-bullet">◆</span> contacto</a>
+      </div>
+    </div>
+
+    <!-- habilidades -->
+    <div class="box">
+      <div class="box-title">habilidades</div>
+      <div class="box-body">
+        <div class="skill-row">
+          <div class="skill-label">html / css / js <span>95%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">react / node <span>85%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:85%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">ui / ux <span>80%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">figma <span>78%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:78%"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-label">accesibilidad <span>75%</span></div>
+          <div class="skill-track"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- now playing -->
+    <div class="box">
+      <div class="box-title">now playing</div>
+      <div class="box-body np">
+        <div class="track">nujabes — feather</div>
+        <div class="bar">▮▮▮▮▮▮▯▯▯▯</div>
+        <div>lo-fi · hip hop · 2:47</div>
+        <div style="margin-top:4px;color:var(--red);font-size:9px;">気分 : 集中モード</div>
+      </div>
+    </div>
+
+    <!-- banners -->
+    <div class="box">
+      <div class="box-title">webrings</div>
+      <div class="box-body">
+        <div class="banners">
+          <img src="https://ransei.neocities.org/assets/img/banners/geocities5.gif" alt="" onerror="this.style.display='none'">
+          <img src="https://lupinus.neocities.org/vampiresnestbutton1.gif" alt="" onerror="this.style.display='none'">
+          <img src="https://cinni.net/images/web/tiny/ichigo_i3.gif" alt="" onerror="this.style.display='none'">
+          <img src="https://visce.neocities.org/images/4indx/02.gif" alt="" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+    
+
+  </aside>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main>
+
+    <!-- intro -->
+    <div class="intro" id="sobre-mi">
+      <div class="intro-quote">開発者 · 芸術家</div>
+      <div class="intro-text">
+        Estudiante de ingeniería de software de la Fundación Universitaria Compensar, formándome como un profesional íntegro que busca desarrollar habilidades prácticas en programación, desarrollo web y de software. Soy responsable, apasionado por el aprendizaje y la innovación; en mi tiempo libre realizo cursos para continuar mi formación y crecimiento profesional.
+      </div>
+    </div>
+
+    <!-- estudios -->
+    <div class="box" id="estudios">
+      <div class="box-title">formación académica</div>
+      <div class="box-body">
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Técnica profesional en Programación de Aplicaciones de Software</span>
+            <span class="entry-date">ago. 2022 – jun. 2027</span>
+          </div>
+          <div class="entry-where">Fundación Universitaria Compensar</div>
+          <div class="entry-body">Formación en programación de aplicaciones, fundamentos de ingeniería de software y buenas prácticas para el desarrollo de soluciones empresariales.</div>
+          <div><span class="tag">Programación</span><span class="tag">Microsoft Excel</span><span class="tag">Comunicación</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- experiencia -->
+    <div class="box" id="experiencia">
+      <div class="box-title">experiencia laboral</div>
+      <div class="box-body">
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Practicante universitaria</span>
+            <span class="entry-date">oct. 2025 – actualidad</span>
+          </div>
+          <div class="entry-where">Compensar · Contrato de prácticas</div>
+          <div class="entry-body">Prácticas profesionales en área tecnológica, participación en proyectos internos en modalidad híbrida.</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Desarrollador de back-end</span>
+            <span class="entry-date">sept. 2025 – actualidad</span>
+          </div>
+          <div class="entry-where">PAINT POWER</div>
+          <div class="entry-body">Desarrollo back-end en entorno remoto; diseño e implementación de APIs y lógica de negocio.</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Desarrollador de back-end</span>
+            <span class="entry-date">abr. 2025 – ago. 2025</span>
+          </div>
+          <div class="entry-where">PAINT POWER</div>
+          <div class="entry-body">Trabajo en proyectos de integración y despliegue de servicios back-end.</div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <span class="entry-title">Desarrollador (prácticas)</span>
+            <span class="entry-date">mar. 2024 – sept. 2024</span>
+          </div>
+          <div class="entry-where">Tata Consultancy Services · Contrato de prácticas</div>
+          <div class="entry-body">Prácticas en desarrollo de software; trabajo en equipo en proyectos corporativos en modalidad híbrida.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- proyectos -->
+    <div class="box" id="proyectos">
+      <div class="box-title">proyectos destacados</div>
+      <div class="box-body">
+        <!-- Sección de proyectos vacía por ahora -->
+        <div class="proj-grid"></div>
+      </div>
+    </div>
+
+    <!-- contacto mini (movido desde el aside) -->
+    <div class="box">
+      <div class="box-title">contacto</div>
+      <div class="box-body">
+        <a class="clink" href="mailto:manuelardila24@gmail.com"><span>✉</span> manuelardila24@gmail.com</a>
+        <a class="clink" href="#"><span>◎</span> https://www.linkedin.com/in/manuel-jesús-ardila-parrado/</a>
+        <a class="clink" href="#"><span>◈</span> https://github.com/Bakugod777</a>
+        <a class="clink" href="tel:+573146560096"><span>☏</span> +57 314 656 0096</a>
+      </div>
+    </div>
+
+    
+    </div>
+
+  </main>
+</div><!-- /layout -->
+
+<!-- FOOTER -->
+<div class="site-footer">
+  <div style="color:var(--border2); margin-bottom:4px; letter-spacing:4px;">────────────────────</div>
+  <span class="blink" style="color:var(--red)">◆</span>
+  &nbsp; bakugod.exe · manuel ardila © 2026 · colombia &nbsp;
+  <span class="blink" style="color:var(--red)">◆</span>
+  <br>
+  <span style="font-family:'Noto Serif JP',serif; font-size:10px; color:var(--border2);">
+    作られた愛情を持って
+  </span>
+  <br>
+  <a href="mailto:manuel@email.com">email</a> &nbsp;·&nbsp;
+  <a href="#">github</a> &nbsp;·&nbsp;
+  <a href="#">linkedin</a>
+  <br>
+  <span style="font-size:8px; color:var(--border2)">best viewed at 1024×768 · made with ♡</span>
+</div>
+
+</div>
 </body>
 </html>
